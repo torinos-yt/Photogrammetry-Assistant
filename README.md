@@ -4,5 +4,7 @@
 Track the camera position using the steamvr system. Save the location where you took the picture and visualize the history.
 
 ・Visualize location that took picture
+
 ・Graphization each distance to previous picture location
+
 ・see angle difference from the previous picture location centered on target object
