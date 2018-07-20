@@ -322,26 +322,6 @@
    </LINK>
    <LINK srcnodeid="99" srcpinname="Output" dstnodeid="87" dstpinname="From">
    </LINK>
-   <NODE systemname="Render Camera(DX11.Layer)" filename="module\Render Camera(DX11.Layer).v4p" nodename="module\Render Camera(DX11.Layer).v4p" componentmode="Hidden" id="49">
-   <BOUNDS type="Node" left="2055" top="10395" width="0" height="0">
-   </BOUNDS>
-   <BOUNDS type="Box" left="0" top="8005" width="4645" height="4780">
-   </BOUNDS>
-   <BOUNDS type="Window" left="12255" top="8415" width="4635" height="4770">
-   </BOUNDS>
-   <PIN pinname="Layer" visible="1">
-   </PIN>
-   <PIN pinname="Transform In" visible="1" slicecount="1" values="||">
-   </PIN>
-   <PIN pinname="Scale" visible="1">
-   </PIN>
-   <PIN pinname="conelength" visible="1" slicecount="1" values="0.5">
-   </PIN>
-   </NODE>
-   <LINK srcnodeid="85" srcpinname="Transform Out" dstnodeid="49" dstpinname="Transform In">
-   </LINK>
-   <LINK srcnodeid="98" srcpinname="Y Output Value" dstnodeid="49" dstpinname="Scale">
-   </LINK>
    <NODE systemname="Controller (OpenVR Split)" filename="%VVVV%\packs\VVVV.OpenVR\nodes\plugins\VVVV.OpenVR.dll" nodename="Controller (OpenVR Split)" componentmode="Hidden" id="100">
    <BOUNDS type="Node" left="5505" top="4560" width="100" height="100">
    </BOUNDS>
@@ -396,10 +376,6 @@
    <PIN pinname="Descriptive Name" slicecount="1" values="conelength">
    </PIN>
    </NODE>
-   <LINK srcnodeid="104" srcpinname="Y Output Value" dstnodeid="49" dstpinname="conelength">
-   </LINK>
-   <LINK srcnodeid="49" srcpinname="Layer" dstnodeid="4" dstpinname="Layer 4">
-   </LINK>
    <NODE systemname="Count (3d)" filename="%VVVV%\lib\nodes\modules\3D\Count (3D).v4p" nodename="Count (3d)" componentmode="Hidden" id="125">
    <BOUNDS type="Node" left="6315" top="8400" width="100" height="100">
    </BOUNDS>
@@ -933,6 +909,8 @@
    </BOUNDS>
    <PIN pinname="Input Value" visible="1">
    </PIN>
+   <PIN pinname="Receive String" slicecount="1" values="|Target Pos|">
+   </PIN>
    </NODE>
    <LINK srcnodeid="257" srcpinname="Input Value" dstnodeid="218" dstpinname="XYZ">
    </LINK>
@@ -940,6 +918,8 @@
    <BOUNDS type="Node" left="10680" top="12780" width="100" height="100">
    </BOUNDS>
    <PIN pinname="Input Value" visible="1">
+   </PIN>
+   <PIN pinname="Receive String" slicecount="1" values="|Target Pos|">
    </PIN>
    </NODE>
    <LINK srcnodeid="258" srcpinname="Input Value" dstnodeid="192" dstpinname="Target Pos">
@@ -1013,5 +993,29 @@
    </PIN>
    </NODE>
    <LINK srcnodeid="265" srcpinname="Input Value" dstnodeid="157" dstpinname="Input">
+   </LINK>
+   <NODE systemname="RenderCamera (DX11.Layer)" filename="module\RenderCamera (DX11.Layer).v4p" nodename="RenderCamera (DX11.Layer)" componentmode="Hidden" id="49">
+   <BOUNDS type="Node" left="2055" top="10395" width="100" height="100">
+   </BOUNDS>
+   <BOUNDS type="Box" left="0" top="8005" width="4645" height="4780">
+   </BOUNDS>
+   <BOUNDS type="Window" left="12255" top="8415" width="4635" height="4770">
+   </BOUNDS>
+   <PIN pinname="Layer" visible="1">
+   </PIN>
+   <PIN pinname="Transform In" visible="1" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Scale" visible="1">
+   </PIN>
+   <PIN pinname="conelength" visible="1" slicecount="1" values="0.5">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="85" srcpinname="Transform Out" dstnodeid="49" dstpinname="Transform In">
+   </LINK>
+   <LINK srcnodeid="98" srcpinname="Y Output Value" dstnodeid="49" dstpinname="Scale">
+   </LINK>
+   <LINK srcnodeid="104" srcpinname="Y Output Value" dstnodeid="49" dstpinname="conelength">
+   </LINK>
+   <LINK srcnodeid="49" srcpinname="Layer" dstnodeid="4" dstpinname="Layer 4">
    </LINK>
    </PATCH>
