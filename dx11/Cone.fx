@@ -37,14 +37,14 @@ struct GSout
 	float4 Pos: SV_Position;
 };
 
-vs2gs VS(uint iv : SV_VertexID)
+vs2gs VS()
 {
 	vs2gs Out;
 	Out.PosO = float4(0,0,0,1);
     return Out;
 }
 
-[maxvertexcount(60)]
+[maxvertexcount(30)]
 void Cone(point vs2gs input[1], inout LineStream<GSout> gsout)
 {	
 	float z = conelength;

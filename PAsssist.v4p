@@ -1,6 +1,6 @@
 <!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv50beta36.dtd" >
    <PATCH nodename="F:\vvvv\work\Photogrammetry Assist\PAsssist.v4p" systemname="PAsssist" filename="F:\vvvv\work\Photogrametry Assist\PAsssist.v4p" scrollx="0" scrolly="4035">
-   <BOUNDS type="Window" left="0" top="0" width="23910" height="15585">
+   <BOUNDS type="Window" left="0" top="15" width="23910" height="15585">
    </BOUNDS>
    <PACK Name="dx11" Version="1.3.1">
    </PACK>
