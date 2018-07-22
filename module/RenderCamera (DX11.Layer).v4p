@@ -1,5 +1,5 @@
 <!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv50beta36.dtd" >
-   <PATCH nodename="F:\vvvv\work\Photogrametry Assist\module\Render Camera(DX11.Layer).v4p" systemname="Render Camera (DX11.Layer)" filename="F:\vvvv\work\Photogrametry Assist\module\Render Camera(DX11.Layer).v4p">
+   <PATCH nodename="F:\vvvv\work\Photogrammetry Assist\module\RenderCamera (DX11.Layer).v4p" systemname="Render Camera (DX11.Layer)" filename="F:\vvvv\work\Photogrametry Assist\module\Render Camera(DX11.Layer).v4p" scrollx="210" scrolly="375">
    <NODE systemname="Rasterizer (DX11.RenderState)" filename="%VVVV%\packs\dx11\nodes\plugins\base\VVVV.DX11.Nodes.dll" nodename="Rasterizer (DX11.RenderState)" componentmode="Hidden" id="0">
    <BOUNDS type="Node" left="1500" top="1605" width="100" height="100">
    </BOUNDS>
@@ -26,18 +26,6 @@
    <PIN pinname="conelength" visible="1" slicecount="1" values="0.5">
    </PIN>
    </NODE>
-   <NODE systemname="Grid (DX11.Geometry)" filename="%VVVV%\packs\dx11\nodes\plugins\base\VVVV.DX11.Nodes.dll" nodename="Grid (DX11.Geometry)" componentmode="Hidden" id="2">
-   <BOUNDS type="Node" left="2580" top="1500" width="100" height="100">
-   </BOUNDS>
-   <BOUNDS type="Box" left="2580" top="1500" width="3000" height="3000">
-   </BOUNDS>
-   <PIN pinname="Geometry Out" visible="1">
-   </PIN>
-   <PIN pinname="Resolution X" slicecount="1" values="2">
-   </PIN>
-   <PIN pinname="Resolution Y" slicecount="1" values="2">
-   </PIN>
-   </NODE>
    <NODE systemname="Scale (Transform Vector)" nodename="Scale (Transform Vector)" componentmode="Hidden" id="3">
    <BOUNDS type="Node" left="3045" top="2595" width="100" height="100">
    </BOUNDS>
@@ -49,8 +37,6 @@
    </PIN>
    </NODE>
    <LINK srcnodeid="0" srcpinname="Render State" dstnodeid="1" dstpinname="Render State">
-   </LINK>
-   <LINK srcnodeid="2" srcpinname="Geometry Out" dstnodeid="1" dstpinname="Geometry">
    </LINK>
    <LINK srcnodeid="3" srcpinname="Transform Out" dstnodeid="1" dstpinname="Transform In">
    </LINK>
@@ -74,7 +60,7 @@
    <PIN pinname="Y Output Value" visible="1">
    </PIN>
    </NODE>
-   <BOUNDS type="Window" left="12255" top="8415" width="4635" height="4770">
+   <BOUNDS type="Window" left="5220" top="5340" width="4635" height="4770">
    </BOUNDS>
    <PACK Name="dx11" Version="1.3.1">
    </PACK>
@@ -125,5 +111,17 @@
    </PIN>
    </NODE>
    <LINK srcnodeid="9" srcpinname="Y Output Value" dstnodeid="1" dstpinname="conelength">
+   </LINK>
+   <NODE systemname="NullIndirect (DX11.Drawer)" filename="%VVVV%\packs\dx11\nodes\plugins\base\VVVV.DX11.Nodes.dll" nodename="NullIndirect (DX11.Drawer)" componentmode="Hidden" id="10">
+   <BOUNDS type="Node" left="1095" top="2250" width="100" height="100">
+   </BOUNDS>
+   <BOUNDS type="Box" left="1095" top="2250" width="3000" height="3000">
+   </BOUNDS>
+   <PIN pinname="Geometry Out" visible="1">
+   </PIN>
+   <PIN pinname="Enabled" slicecount="1" values="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="10" srcpinname="Geometry Out" dstnodeid="1" dstpinname="Geometry">
    </LINK>
    </PATCH>

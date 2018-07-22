@@ -37,7 +37,7 @@ struct GSout
 	float4 Pos: SV_Position;
 };
 
-vs2gs VS(float3 PosO: POSITION)
+vs2gs VS(uint iv : SV_VertexID)
 {
 	vs2gs Out;
 	Out.PosO = float4(0,0,0,1);
